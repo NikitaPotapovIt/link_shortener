@@ -6,7 +6,7 @@ import threading
 class URLShortenerApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Сокращатель ссылок - Локальная версия")
+        self.root.title("Сокращатель ссылок")
         self.root.geometry("500x400")
         self.root.resizable(True, True)
         
@@ -18,18 +18,13 @@ class URLShortenerApp:
         main_frame = ttk.Frame(self.root, padding="10")
         main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
-        # Заголовок
-        title_label = ttk.Label(main_frame, text="Собственный сокращатель ссылок", 
-                               font=("Arial", 14, "bold"))
-        title_label.grid(row=0, column=0, columnspan=2, pady=10)
-        
         # Поле для исходной ссылки
         ttk.Label(main_frame, text="Введите URL:").grid(row=1, column=0, sticky=tk.W, pady=5)
         self.url_entry = ttk.Entry(main_frame, width=50, font=("Arial", 10))
         self.url_entry.grid(row=1, column=1, sticky=(tk.W, tk.E), pady=5, padx=5)
         
         # Поле для кастомного кода (опционально)
-        ttk.Label(main_frame, text="Кастомный код (необязательно):").grid(row=2, column=0, sticky=tk.W, pady=5)
+        ttk.Label(main_frame, text="Свой код ссылки (необязательно):").grid(row=2, column=0, sticky=tk.W, pady=5)
         self.custom_code_entry = ttk.Entry(main_frame, width=20, font=("Arial", 10))
         self.custom_code_entry.grid(row=2, column=1, sticky=tk.W, pady=5, padx=5)
         
