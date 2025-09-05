@@ -1,0 +1,10 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+sqlalchemy==1.4.52
+databases==0.8.0
+validators==0.22.0
+shortuuid==1.0.11
+python-dotenv==1.0.0
+pydantic-settings==2.1.0
+aiosqlite==0.19.0
+requests==2.31.0
